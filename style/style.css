@@ -5,7 +5,6 @@
     height: auto;
     width: auto;
     
-        text-align:center;
         display:block;
         
 
@@ -56,16 +55,21 @@ header h1 {
 }
 
 .form1{
-  display: block;
+ display: table-;  ;
 text-align: center;;
 margin: top 300px;
 padding-top:20px;
 
 }
 .form1 ,div ,input{
-  justify-items:center;
+ 
   padding left: 50px;;
   display: block;
+  display: table-cell;;
+
+}
+.form1,label{
+  display: table-cell;
 }
 header {
  background:rgb(100, 56, 67);
@@ -124,6 +128,7 @@ ul a{
     opacity: 0.7;
 }
  input,select {
+  
     width:400px;
     padding: 12px 20px;
     margin: 8px 0;
@@ -133,7 +138,7 @@ ul a{
     box-sizing: border-box;
     font-size: 15px;
     background-color: rgba(241, 228, 211,.7);
-    margin-left:450px;
+ 
   }  
   option{
     font-size: 15px;
@@ -166,8 +171,11 @@ ul a{
   }
 
  
-body {
+html {
   
   background-size: cover; 
     line-height: 1;
+   align-self: center; 
+   text-align:center;
+   table-align:center;
 }

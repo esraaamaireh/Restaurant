@@ -1,7 +1,7 @@
- 'use strict'
+'use strict'
 let id = 0;
 var num = 0;
-var n; 
+var n;
 
 
 
@@ -25,30 +25,30 @@ tr.appendChild(th4);
 
 
 
-function Restaurant(foodName,foodType, price) {
+function Restaurant(foodName, foodType, price) {
     this.foodName = foodName;
-    
+
     this.foodType = foodType;
     this.price = price;
-   
-    
+
+
 }
 Restaurant.prototype.UniqueID = function () {//UNIQUE ID FUNCTION
-    var count = ""+num;
+    var count = "" + num;
 
     num++;
-   return count ;
+    return count;
 
 
 };
-Restaurant.prototype.render = function () { 
+Restaurant.prototype.render = function () {
 
-   
 
-    
+    const trl = document.createElement('tr')
+    table.appendChild(trl)
+
     const td1 = document.createElement('td');
     td1.textContent = this.UniqueID();
-  
     trl.appendChild(td1);
     const td2 = document.createElement('td');
     td2.textContent = this.foodName;
@@ -59,35 +59,16 @@ Restaurant.prototype.render = function () {
     const td4 = document.createElement('td');
     td4.textContent = this.price;
     trl.appendChild(td4);
-    
+
 
 
 
 };
 
-// function handler(e) {
-//     e.preventDefault();
-    
-//     let foodName = document.getElementById("foodtable").value;
 
-//     // e.target.foodtable.value;
-   
-//     let price = document.getElementById("price").value;
-//     //e.target.foodtype.selectedOptions;
-    
-//     let foodType = document.querySelector.value
-//     // e.target.foodprice.value;
-//     let foodTable = new Restaurant(foodName, foodType, price);
-// console.log();
-// }
-            
-//     foodTable.foodID;
-//     foodTable.render();
-
-  
 
 let saveValues = document.getElementById('foodForm');
-    
+
 saveValues.addEventListener('submit', function (event) {
     event.preventDefault();
 
@@ -97,4 +78,4 @@ saveValues.addEventListener('submit', function (event) {
     let foodTable = new Restaurant(foodName, foodType, price);
     foodTable.UniqueID();
     foodTable.render();
-    })
+})
